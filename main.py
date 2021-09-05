@@ -1,8 +1,16 @@
 import random
 import sys
 
-months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-months_polish = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec", "Sierpień", "Wrzesień", "Pazdziernik", "Listopad", "Grudzień"]
+months_raw = open("Months.txt",encoding="utf-8").readlines()
+months_polish_raw = open("MonthsPolish.txt",encoding="utf-8").readlines()
+months = []
+months_polish = []
+
+for element in months_raw:
+    months.append(element.strip())
+
+for element in months_polish_raw:
+    months_polish.append(element.strip())
 
 option = input("""
 Choose an option:
